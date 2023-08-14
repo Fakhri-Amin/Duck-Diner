@@ -102,6 +102,11 @@ public class Player : MonoBehaviour, IKitchenObjectParent
     {
         Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
 
+        if (inputVector == Vector2.zero)
+        {
+            isWalking = false;
+            return;
+        }
         Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
 
         float moveDistance = moveSpeed * Time.deltaTime;
