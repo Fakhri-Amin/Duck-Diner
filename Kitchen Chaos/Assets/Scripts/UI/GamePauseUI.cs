@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MoreMountains.Feedbacks;
 
 public class GamePauseUI : MonoBehaviour
 {
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button optionsButton;
     [SerializeField] private Button mainMenuButton;
+    [SerializeField] private MMFeedbacks mainMenuFeedbacks;
 
     private void Awake()
     {
@@ -19,7 +21,8 @@ public class GamePauseUI : MonoBehaviour
 
         mainMenuButton.onClick.AddListener(() =>
         {
-            Loader.Load(Loader.Scene.MainMenuScene);
+            // Loader.Load(Loader.Scene.MainMenuScene);
+            mainMenuFeedbacks.PlayFeedbacks();
         });
 
         optionsButton.onClick.AddListener(() =>

@@ -8,11 +8,11 @@ public class LoaderCallback : MonoBehaviour
 
     private void Update()
     {
-        if (isFirstUpdate)
-        {
-            isFirstUpdate = false;
+        // if (isFirstUpdate)
+        // {
+        //     isFirstUpdate = false;
 
-            Loader.LoaderCallback();
-        }
+        //     Loader.LoaderCallback();
+        // }
     }
 }
